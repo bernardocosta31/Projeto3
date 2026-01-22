@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
     <meta name="description" content="Quiosque Urbano Interativo - Guimarães">
     <meta name="theme-color" content="#828282">
-    <title>City Pulse - Guimarães</title>
+    <title>LoL - Guimarães</title>
 
     <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -35,7 +35,7 @@
 
         <!-- Header -->
         <header class="app-header">
-            <h1 class="logo">Guimarães <span class="highlight">Viva</span></h1>
+            <h1 class="logo">loP <span class="highlight">LIVING ORDINARY PROTECTION</span></h1>
             <div class="weather-widget glass-panel">
                 <span id="current-temp">18°C</span>
                 <i class="ph ph-cloud-sun weather-icon"></i>
@@ -45,7 +45,7 @@
         <!-- City Pulse Section (Map) -->
         <section class="city-pulse">
             <div class="section-header">
-                <h2>Pulso da Cidade</h2>
+                <h2>Lotação da cidade</h2>
                 <span class="live-indicator"><span class="dot"></span> EM TEMPO REAL</span>
             </div>
 
@@ -90,12 +90,19 @@
             <section class="visual-zones-grid">
 
                 <!-- Party Zone -->
-                <article class="visual-card zone-party"
-                    style="background-image: url('../../.gemini/antigravity/brain/76cf4c96-3cfd-4f49-ad89-b96962ed9aff/zone_party_1768782058191.png');">
+                <article class="visual-card zone-party">
+                    <img
+                        src="assets/largo_do_toural.jpg"
+                        alt="Zona de festa"
+                        class="card-image">
+
                     <div class="overlay-gradient"></div>
+
                     <div class="content">
-                        <span class="badge red"><i class="ph ph-speaker-high"></i> Acontecendo Agora</span>
-                        <h4>Onde está a festa?</h4>
+                        <span class="badge red">
+                            <i class="ph ph-speaker-high"></i> Acontecendo Agora
+                        </span>
+                        <h4>Onde está mais movimentado?</h4>
                         <div class="location-detail">
                             <span class="highlight-text">Largo do Toural</span>
                             <span class="sub-text">Música ao vivo • Cheio</span>
@@ -105,7 +112,7 @@
 
                 <!-- Relax Zone -->
                 <article class="visual-card zone-relax"
-                    style="background-image: url('../../.gemini/antigravity/brain/76cf4c96-3cfd-4f49-ad89-b96962ed9aff/zone_relax_1768782078070.png');">
+                    style="background-image: url('assets/parque_de_lazer_da_cidade_2796.jfif');">
                     <div class="overlay-gradient"></div>
                     <div class="content">
                         <span class="badge green"><i class="ph ph-tree"></i> Zona Zen</span>
@@ -119,22 +126,26 @@
 
             </section>
 
-            <!-- Flora Local Card -->
-            <article class="card flora-card glass-panel" style="margin-top: 30px;">
+            <!-- Flora Card -->
+            <article class="card flora-card glass-panel">
                 <div class="flora-image">
-                    <img src="../../.gemini/antigravity/brain/76cf4c96-3cfd-4f49-ad89-b96962ed9aff/flora_alecrim.png"
-                        alt="Alecrim Rasteiro"
-                        style="width: 100%; height: 100%; object-fit: cover; border-radius: 8px;">
+                    <img
+                        src="assets/giesta-amarela-reserva-natural-serra-malcata.jpg"
+                        alt="Giesta">
                 </div>
+
                 <div class="flora-content">
                     <h4><i class="ph ph-plant"></i> Flora Local</h4>
-                    <h5 class="plant-name">Alecrim Rasteiro</h5>
-                    <p class="scientific-name">Rosmarinus officinalis 'Prostratus'</p>
+                    <h5 class="plant-name">Giesta</h5>
+                    <p class="scientific-name">Genisteae</p>
+
                     <div class="flora-tags">
                         <span class="tag">Mediterrânico</span>
                         <span class="tag">Aromático</span>
                     </div>
-                    <p class="flora-desc">Excelente cobertura de solo, resistente à seca e atrai polinizadores urbanos.
+
+                    <p class="flora-desc">
+                        Excelente cobertura de solo, resistente à seca e atrai polinizadores urbanos.
                     </p>
                 </div>
             </article>
@@ -171,5 +182,6 @@
 
     <script src="script.js"></script>
 </body>
+
 
 </html>
