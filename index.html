@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="pt-PT">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <meta name="description" content="Quiosque Urbano Interativo - Guimarães">
+    <meta name="theme-color" content="#828282">
+    <title>City Pulse - Guimarães</title>
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@200;300;400;600;700&display=swap" rel="stylesheet">
+
+    <!-- Phosphor Icons -->
+    <script src="https://unpkg.com/@phosphor-icons/web"></script>
+
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+
+    <!-- SOS/Alert Bar -->
+    <div id="sos-bar" class="sos-bar glass-panel">
+        <div class="sos-content">
+            <i class="ph ph-warning-circle sos-icon"></i>
+            <span class="sos-message">ALERTA METEOROLÓGICO: Chuva intensa prevista para as 18h.</span>
+        </div>
+        <button class="sos-close" aria-label="Fechar Alerta"><i class="ph ph-x"></i></button>
+    </div>
+
+    <!-- Main Container -->
+    <main class="app-container">
+
+        <!-- Header -->
+        <header class="app-header">
+            <h1 class="logo">Guimarães <span class="highlight">Viva</span></h1>
+            <div class="weather-widget glass-panel">
+                <span id="current-temp">18°C</span>
+                <i class="ph ph-cloud-sun weather-icon"></i>
+            </div>
+        </header>
+
+        <!-- City Pulse Section (Map) -->
+        <section class="city-pulse">
+            <div class="section-header">
+                <h2>Pulso da Cidade</h2>
+                <span class="live-indicator"><span class="dot"></span> EM TEMPO REAL</span>
+            </div>
+
+            <div class="map-container" id="map-container">
+                <div class="map-bg">
+                    <iframe width="100%" height="100%" frameborder="0" scrolling="no" marginheight="0" marginwidth="0"
+                        src="https://maps.google.com/maps?q=41.4432765,-8.2933277&hl=pt-PT&z=17&output=embed">
+                    </iframe>
+                </div>
+
+                <a href="https://www.google.com/maps/@41.4432765,-8.2933277,16.75z?entry=ttu&g_ep=EgoyMDI2MDExMy4wIKXMDSoKLDEwMDc5MjA3M0gBUAM%3D"
+                    target="_blank" class="map-external-link glass-panel" aria-label="Abrir no Google Maps">
+                    <i class="ph ph-arrow-square-out"></i> Ver Mapa Completo
+                </a>
+            </div>
+        </section>
+
+        <!-- Crowdsourcing Widget -->
+        <section class="crowdsource-widget glass-panel">
+            <h3>Como está o ambiente agora?</h3>
+            <div class="voting-buttons">
+                <button class="vote-btn vibe-calm" data-vibe="calm">
+                    <i class="ph ph-leaf btn-icon"></i>
+                    Calmo
+                </button>
+                <button class="vote-btn vibe-busy" data-vibe="busy">
+                    <i class="ph ph-users btn-icon"></i>
+                    Movimentado
+                </button>
+                <button class="vote-btn vibe-intense" data-vibe="intense">
+                    <i class="ph ph-fire btn-icon"></i>
+                    Intenso
+                </button>
+            </div>
+            <p id="vote-feedback" class="vote-feedback hidden">Obrigado pela tua contribuição!</p>
+        </section>
+
+        <!-- Info Grid -->
+        <div class="info-grid">
+
+            <!-- Visual Zone Comparison -->
+            <section class="visual-zones-grid">
+
+                <!-- Party Zone -->
+                <article class="visual-card zone-party"
+                    style="background-image: url('../../.gemini/antigravity/brain/76cf4c96-3cfd-4f49-ad89-b96962ed9aff/zone_party_1768782058191.png');">
+                    <div class="overlay-gradient"></div>
+                    <div class="content">
+                        <span class="badge red"><i class="ph ph-speaker-high"></i> Acontecendo Agora</span>
+                        <h4>Onde está a festa?</h4>
+                        <div class="location-detail">
+                            <span class="highlight-text">Largo do Toural</span>
+                            <span class="sub-text">Música ao vivo • Cheio</span>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- Relax Zone -->
+                <article class="visual-card zone-relax"
+                    style="background-image: url('../../.gemini/antigravity/brain/76cf4c96-3cfd-4f49-ad89-b96962ed9aff/zone_relax_1768782078070.png');">
+                    <div class="overlay-gradient"></div>
+                    <div class="content">
+                        <span class="badge green"><i class="ph ph-tree"></i> Zona Zen</span>
+                        <h4>Onde relaxar?</h4>
+                        <div class="location-detail">
+                            <span class="highlight-text">Parque da Cidade</span>
+                            <span class="sub-text">Silêncio • Natureza</span>
+                        </div>
+                    </div>
+                </article>
+
+            </section>
+
+            <!-- Flora Local Card -->
+            <article class="card flora-card glass-panel" style="margin-top: 30px;">
+                <div class="flora-image">
+                    <img src="../../.gemini/antigravity/brain/76cf4c96-3cfd-4f49-ad89-b96962ed9aff/flora_alecrim.png"
+                        alt="Alecrim Rasteiro"
+                        style="width: 100%; height: 100%; object-fit: cover; border-radius: 8px;">
+                </div>
+                <div class="flora-content">
+                    <h4><i class="ph ph-plant"></i> Flora Local</h4>
+                    <h5 class="plant-name">Alecrim Rasteiro</h5>
+                    <p class="scientific-name">Rosmarinus officinalis 'Prostratus'</p>
+                    <div class="flora-tags">
+                        <span class="tag">Mediterrânico</span>
+                        <span class="tag">Aromático</span>
+                    </div>
+                    <p class="flora-desc">Excelente cobertura de solo, resistente à seca e atrai polinizadores urbanos.
+                    </p>
+                </div>
+            </article>
+
+            <!-- Urban Mobility Widget -->
+            <article class="card mobility-card glass-panel">
+                <h4><i class="ph ph-car"></i> Trânsito em Redor</h4>
+                <div class="traffic-light-container">
+                    <div class="traffic-light">
+                        <div class="light red"></div>
+                        <div class="light yellow active"></div>
+                        <div class="light green"></div>
+                    </div>
+                    <div class="traffic-status">
+                        <strong>Moderado</strong>
+                        <span>Rua de Santo António</span>
+                    </div>
+                </div>
+            </article>
+
+        </div>
+
+    </main>
+
+    <!-- Floating Action Button for Report -->
+    <button class="fab-report" aria-label="Reportar Perigo">
+        <i class="ph ph-warning-octagon"></i>
+        <span>REPORTAR PERIGO</span>
+    </button>
+
+    <footer class="app-footer">
+        <p>&copy; 2026 Smart City Guimarães</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
